@@ -1,0 +1,10 @@
+<h1>Welcome to the Bookmark page for <%= @list.name %> </h1>
+
+<%= simple_form_for([@list, @bookmark]) do |f| %>
+<%= f.input :comment %>
+
+<%# Add a drop-down menu showing all available movies %>
+<%= f.association :movie %>
+
+<%= f.submit "Submit review", class: "btn-primary" %>
+<% end %>
